@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+}
+body {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+/* NAV BAR */
+
+
+
+header {
+    position: fixed;
+    z-index: 9999;
+    top:0;
+    width: 100%;
+    height: auto;
+    background-color: black;
+    padding-block: 5vh;
+    padding-inline: 10vw;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav > ul {
+    display: flex; 
+    flex-direction: row;
+    column-gap: 3vw;
+    align-items: center;
+    justify-content: center;
+}
+nav > ul > li {
+    color: white;
+    list-style: none;
+    font-family: 'Raleway';
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+li:hover {
+    color:rgb(180, 51, 111);
+}
+
+nav > ul > li > button {
+    padding: 8px 20px;
+    border-radius: 16px;
+    border: none;
+    background-color: rgb(180, 51, 111);
+    color: black;
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 500;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    transition: all 0.3s ease 0s;
+}
+
+nav > ul > li > button:hover {
+    background-color: rgb(117, 24, 67); 
+}
+
+nav > ul > li > button > img {
+    max-width: 1.5vw;
+    margin-right: 1vw;
+}
+nav > .hamburger_menu {
+    display: none;
+}
+
+
+/* MAIN SECTION */
+
+main {
+    width: 100%;
+}
+
+.hero_section {
+    height: 100%;
+    width: auto;
+}
+main > .hero_section > div {
+    background-image: url("./Assets/bg11.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 150vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero_section > div > img {
+    -webkit-filter: drop-shadow(15px 15px 15px #222);
+    filter: drop-shadow(15px 15px 15px #222);
+    width: 50%;  
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 20%;
+    margin-bottom: 20%;
+}
+
+
+
+/* ABOUT SECTION */
+
+.about > .container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+    justify-content: center;
+    align-items: center;
+    padding: 20vh 20vw;
+    font-family: 'Raleway';
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+.about h1 {
+    font-size: 40px;
+    padding-bottom: 20px;
+}
+
+.about p {
+    font-size: 20px;
+    
+}
+
+/* CONTACT SECTION */
+.contact {
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 20vh 20vw;
+}
+.contact > .container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    column-gap: 5vw;
+    border-radius: 32px;
+    overflow: hidden;
+    background-color: white;
+    width: fit-content;
+    box-shadow: 1px 1px rgb(190, 190, 190);
+}
+.contact > .container > form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
+    width: 25vw;
+    padding: 3vw;
+}
+.input-field {
+    border: solid black 1px;
+    border-radius: 16px;
+    padding: 1vw;
+    font-family: 'Roboto';
+    color: black;
+}
+
+.btn {
+    border-radius: 20px;
+    color: #fff;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgb(180, 51, 111) ;
+    font-size: 12px;
+    font-family: 'Roboto';
+    border: none;
+    cursor: pointer;
+}
+.contact > .container > img {
+    max-width: 30vw;
+}
+
+/* FOOTER */ 
+
+footer { 
+    height: 15vh;
+    background-color: rgb(0, 0, 0); 
+    color: #fff;
+    align-content: center;
+    justify-content: center;
+}
+footer > p {
+    text-align: center;
+    font-family: "raleway"; 
+    font-size: 13px; 
+    padding-top: 45px;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display:none;
+    }
+    nav .hamburger_menu {
+        max-width: 30px;
+        display: flex;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact > .container > img {
+        display: none;
+    }
+}
+
+
+@media (max-width: 768px) {
+    main .hero_section > div > img {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact > .container > form{
+        width: 100vw;
+        padding: 0vw;
+
+    }
+    .input-field {
+        border: solid black 2px;
+        border-radius: 40px;
+        padding: 5vw;
+        font-family: 'Roboto';
+        color: black;
+    }
+
+    .btn {
+        border-radius: 40px;
+        color: #fff;
+        margin-top: 10px;
+        padding: 30px;
+        background-color: rgb(180, 51, 111) ;
+        font-size: 18px;
+        font-family: 'Roboto';
+        border: none;
+        cursor: pointer;
+    }
+
+
+}
+
+@media (max-width: 768px) {
+    .contact > .container {
+        box-shadow: none;
+        justify-content: center;    
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+
+
+
+
